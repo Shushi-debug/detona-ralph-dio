@@ -7,8 +7,7 @@ No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma g
 
 🚀 Como jogar:
 
-1.Clone o repositório:
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+1. Clone o repositório: git clone https://github.com/seu-usuario/nome-do-repositorio.git
 
 2. Abra o arquivo index.html diretamente no navegador.
 
