@@ -6,6 +6,7 @@ Este é um jogo simples desenvolvido como parte do bootcamp com o professor Feli
 No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma grade de 9 quadrados, acumulando pontos a cada acerto. Você tem 1 minuto para marcar o máximo de pontos possível!
 
 🚀 Como jogar:
+
 1.Clone o repositório:
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 
