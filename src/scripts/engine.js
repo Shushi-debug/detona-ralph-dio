@@ -4,6 +4,8 @@ const state = {
         enemy: document.querySelector(".enemy"),
         timeLeft: document.querySelector("#time-left"),
         score: document.querySelector("#score"),
+        lives: document.querySelector("#lives"),
+        resetButton: document.querySelector("#reset-button"),
     },
 
     values: {
@@ -11,6 +13,7 @@ const state = {
         hitPosition: 0,
         result: 0,
         currentTime: 60,
+        lives: 3,
     },
     actions: {
         timerId: setInterval(randomSquare, 1000),
@@ -18,22 +21,22 @@ const state = {
     }
 };
 
-function countDown (){
+function playSound(audioName){
+    let audio = new Audio(`./src/audios/${audioName}`);
+    audio.volume = 0.1;
+    audio.play();
+}
+
+function countDown(){
     state.values.currentTime--;
     state.view.timeLeft.textContent = state.values.currentTime;
 
     if (state.values.currentTime <= 0){
         clearInterval(state.actions.countDownTimerId);
         clearInterval(state.actions.timerId);
-        alert("Game Over! O seu resultado foi: " + state.values.result);
-        
+        playSound("death.mp3");
+        alert("Game Over! O seu resultado foi: " + state.values.result + "!" + "Aperte reset para voltar a jogar!");
     }
-}
-
-function playSound(){
-    let audio = new Audio("./src/audios/hit.m4a");
-    audio.volume = 0.1;
-    audio.play();
 }
 
 function randomSquare(){
@@ -50,18 +53,39 @@ function randomSquare(){
 function addListenerHitbox(){
     state.view.squares.forEach((square) => {
         square.addEventListener("mousedown", () => {
+            if(state.values.lives <= 0) {
+                return;
+            }            
             if(square.id === state.values.hitPosition){
                 state.values.result++;
                 state.view.score.textContent = state.values.result;
                 state.values.hitPosition = null;
-                playSound();
+                playSound("hit.m4a");
+            } else {
+                state.values.lives--;
+                state.view.lives.textContent = state.values.lives;
+                playSound("damage.mp3");
+                if (state.values.lives <= 0) {
+                    clearInterval(state.actions.countDownTimerId);
+                    clearInterval(state.actions.timerId);
+                    playSound("death.mp3");
+                    alert("Game Over! O seu resultado foi: " + state.values.result + "!" + " Aperte reset para voltar a jogar!");
+                }
             }
         })
     });
 }
 
+function addListenerResetButton() {
+    state.view.resetButton.addEventListener("click", () => {
+        console.log("clicou")
+        window.location.reload();
+    })
+}
+
 function initialize() {
     addListenerHitbox();
+    addListenerResetButton();
 }
 
 initialize();
