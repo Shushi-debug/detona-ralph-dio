@@ -31,8 +31,7 @@ No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma g
     Temporizadores.
     Eventos de clique.
 
-👩‍💻 Autora
-<<<<<<< HEAD
+👩‍💻 Autores:
 Desenvolvido por Profº Felipe, Stéfani - shushi-debug <3
 Com a ilustre ajuda de Kevin, para aprimoramentos do jogo :D
 =======
