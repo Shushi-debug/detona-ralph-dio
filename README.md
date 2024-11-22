@@ -34,6 +34,3 @@ No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma g
 👩‍💻 Autores:
 Desenvolvido por Profº Felipe, Stéfani - shushi-debug <3
 Com a ilustre ajuda de Kevin, para aprimoramentos do jogo :D
-=======
-Desenvolvido por Profº Felipe e Stéfani - shushi-debug :D <3
->>>>>>> 03c497dbb3da6c4d4dd1f3d9bd4f3377c4d61044
