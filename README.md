@@ -3,7 +3,7 @@
 💡 Sobre o projeto
 Este é um jogo simples desenvolvido como parte do bootcamp com o professor Felipe da Dio. O objetivo é aprender conceitos básicos de JavaScript, HTML5 e CSS, aplicando-os de forma prática.
 
-No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma grade de 9 quadrados, acumulando pontos a cada acerto. Você tem 1 minuto para marcar o máximo de pontos possível!
+No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma grade de 9 quadrados, acumulando pontos a cada acerto e perdendo 1 vida a cada erro. Você tem 1 minuto para marcar o máximo de pontos possível!
 
 🚀 Como jogar:
 
@@ -16,7 +16,9 @@ No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma g
 ✨ Funcionalidades:
 - Grid de 9 quadrados para interação.
 - Contador de pontos atualizado em tempo real.
+- Contador de vidas atualizado em tempo real.
 - Temporizador de 1 minuto para finalizar o jogo.
+- Botão reset.
 
 🛠️ Tecnologias utilizadas:
 - HTML5: estrutura do jogo.
@@ -30,4 +32,9 @@ No jogo, o jogador deve clicar nos inimigos que aparecem aleatoriamente em uma g
     Eventos de clique.
 
 👩‍💻 Autora
+<<<<<<< HEAD
+Desenvolvido por Profº Felipe, Stéfani - shushi-debug <3
+Com a ilustre ajuda de Kevin, para aprimoramentos do jogo :D
+=======
 Desenvolvido por Profº Felipe e Stéfani - shushi-debug :D <3
+>>>>>>> 03c497dbb3da6c4d4dd1f3d9bd4f3377c4d61044
