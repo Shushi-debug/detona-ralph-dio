@@ -34,8 +34,9 @@ function countDown(){
     if (state.values.currentTime <= 0){
         clearInterval(state.actions.countDownTimerId);
         clearInterval(state.actions.timerId);
-        playSound("death.mp3");
-        alert("Game Over! O seu resultado foi: " + state.values.result + "!" + "Aperte reset para voltar a jogar!");
+        ShowPopUp();
+        //playSound("death.mp3");
+        //alert("Game Over! O seu resultado foi: " + state.values.result + "!" + "Aperte reset para voltar a jogar!");
     }
 }
 
@@ -68,8 +69,9 @@ function addListenerHitbox(){
                 if (state.values.lives <= 0) {
                     clearInterval(state.actions.countDownTimerId);
                     clearInterval(state.actions.timerId);
-                    playSound("death.mp3");
-                    alert("Game Over! O seu resultado foi: " + state.values.result + "!" + " Aperte reset para voltar a jogar!");
+                    ShowPopUp();
+                    //playSound("death.mp3");
+                    //alert("Game Over! O seu resultado foi: " + state.values.result + "!" + " Aperte reset para voltar a jogar!");
                 }
             }
         })
@@ -89,3 +91,19 @@ function initialize() {
 }
 
 initialize();
+
+// pop-up //
+
+var buttonPopup = document.querySelector("#button-popup");
+var modal = document.querySelector(".dialog-over");
+var scoreDisplay = document.querySelector("#score-display");
+
+    function ShowPopUp() {
+        scoreDisplay.textContent = `Sua pontuação foi: \n${state.values.result}`;
+        modal.style.display = "flex";
+        modal.showModal();
+        playSound("death.mp3");
+        buttonPopup.addEventListener("click", () => {
+        window.location.reload();
+        })
+    }

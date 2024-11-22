@@ -19,7 +19,7 @@
 }
 
 .panel {
-    margin-top: 1rem;
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,3 +47,60 @@
 .menu-score h2:nth-child(2) {
     margin-top: 1rem;
 }
+
+dialog {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100px;
+    min-height: 200px;
+    width: 50%;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8);
+    border: 5px solid #000000;
+}
+
+#button-popup {
+    margin-top: auto;
+    align-self: center;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    max-width: 100px;
+    max-height: 100px;
+    cursor: pointer;
+}
+
+#button-popup:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+dialog > p {
+    text-align: center;
+    font-size: 30px;
+}
+
+dialog > h2 {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+dialog::backdrop {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+#reset-button {
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+#reset-button:hover {
+    background-color: #ffd700;
+    border: 1px solid #000000;
+} 
